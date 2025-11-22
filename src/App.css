@@ -1,0 +1,48 @@
+/* Nav */
+.nav{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.7); backdrop-filter:saturate(160%) blur(8px); border-bottom:1px solid #e9e3d8; }
+.nav__inner{ display:flex; align-items:center; justify-content:space-between; width:min(100% - 24px, var(--max)); margin-inline:auto; padding:12px 0; }
+.logo{ font-weight:800; letter-spacing:.5px; }
+.nav__links{ display:flex; gap:18px; }
+.nav__links a{ padding:8px 10px; border-radius:10px; }
+.nav__links a.active{ background:var(--brand); color:#fff; }
+.burger{ display:none; background:none; border:0; cursor:pointer; }
+.burger span{ display:block; width:24px; height:2px; background:#333; margin:5px 0; border-radius:2px; }
+.drawer{ display:flex; flex-direction:column; gap:8px; padding:14px 12px; background:#fff; border-bottom:1px solid #eee; }
+
+/* Hero */
+.hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:var(--gap); align-items:center; }
+.hero__text p{ color:var(--muted); margin:8px 0 16px; }
+.hero__img{ border-radius:var(--radius); box-shadow:var(--shadow); }
+
+/* Cards */
+.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--gap); margin-top:28px; }
+.card__body{ padding:14px; }
+
+/* Menu grid */
+.menu-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--gap); }
+.menu-item{ background:var(--card); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); }
+
+/* About */
+.about__grid{ display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+.pill{ padding:.5rem .9rem; background:#fff; border-radius:999px; box-shadow:var(--shadow); }
+
+/* Contact */
+.form{ display:grid; gap:12px; max-width:520px; }
+.form input, .form textarea{
+  width:100%; padding:.8rem 1rem; border-radius:12px; border:1px solid #e6dfd3; background:#fff;
+}
+
+/* Footer */
+.footer{ text-align:center; padding:18px 0 26px; color:var(--muted); border-top:1px solid #e9e3d8; margin-top:26px; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero{ grid-template-columns:1fr; }
+  .cards{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 720px){
+  .nav__links{ display:none; }
+  .burger{ display:block; }
+  .cards{ grid-template-columns:1fr; }
+  .menu-grid{ grid-template-columns:1fr; }
+}
