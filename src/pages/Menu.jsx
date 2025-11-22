@@ -44,7 +44,12 @@ export default function Menu() {
       <div className="menu-grid">
         {shown.map((it) => (
           <motion.div key={it.id} className="menu-item" whileHover={{ scale: 1.02 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
-            <Img className="mi-img" src={it.img} alt={it.name} />
+            <Img
+  className="mi-img"
+  src={import.meta.env.BASE_URL + it.img}
+  alt={it.name}
+/>
+
             <div>
               <h3 className="mi-title">{it.name}</h3>
               <p className="mi-desc">{it.desc}</p>

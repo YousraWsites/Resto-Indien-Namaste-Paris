@@ -59,11 +59,12 @@ export default function Offers() {
           >
             <div className="offer-layout">
               <div className="offer-img-wrap">
-                <Img
-                  src={o.img}
-                  alt={o.title}
-                  className="offer-img"
-                />
+<Img
+  src={import.meta.env.BASE_URL + o.img}
+  alt={o.title}
+  className="offer-img"
+/>
+
                 {o.tag && <span className="badge offer-tag">{o.tag}</span>}
               </div>
 

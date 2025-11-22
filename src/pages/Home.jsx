@@ -99,7 +99,12 @@ export default function Home() {
               transition={{ duration: 0.45, delay: i * 0.12 }}
             >
               <div className="culture-img-wrap">
-                <Img src={it.img} alt={it.name} className="culture-img" />
+                <Img
+  src={import.meta.env.BASE_URL + it.img}
+  alt={it.name}
+  className="culture-img"
+/>
+
               </div>
 
               <div className="card__body culture-body">
