@@ -21,7 +21,7 @@ export const MENU = [
     spicy: 1,
     sig: true,
     price: 5.5,
-    img: "/img/menu/Samosa.jpg",
+    img: "img/menu/Samosa.jpg",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const MENU = [
     spicy: 1,
     sig: false,
     price: 5.5,
-    img: "/img/menu/Pakora.jpg",
+    img: "img/menu/Pakora.jpg",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export const MENU = [
     spicy: 2,
     sig: false,
     price: 6.0,
-    img: "/img/menu/PaniPuri.jpg",
+    img: "img/menu/PaniPuri.jpg",
   },
 
   // 🍛 Curries
@@ -56,7 +56,7 @@ export const MENU = [
     spicy: 2,
     sig: false,
     price: 8.0,
-    img: "/img/menu/PavBhaji.jpg",
+    img: "img/menu/PavBhaji.jpg",
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const MENU = [
     spicy: 2,
     sig: true,
     price: 12.5,
-    img: "/img/menu/ChickenTikka.jpg",
+    img: "img/menu/ChickenTikka.jpg",
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ export const MENU = [
     spicy: 2,
     sig: false,
     price: 11.0,
-    img: "/img/menu/PaneerTikka.jpg",
+    img: "img/menu/PaneerTikka.jpg",
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ export const MENU = [
     spicy: 1,
     sig: true,
     price: 13.5,
-    img: "/img/menu/ButterChicken.jpg",
+    img: "img/menu/ButterChicken.jpg",
   },
   {
     id: 8,
@@ -100,7 +100,7 @@ export const MENU = [
     spicy: 2,
     sig: false,
     price: 12.0,
-    img: "/img/menu/ChickenMasala.jpg",
+    img: "img/menu/ChickenMasala.jpg",
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ export const MENU = [
     spicy: 1,
     sig: false,
     price: 10.0,
-    img: "/img/menu/PalakPaneer.jpg",
+    img: "img/menu/PalakPaneer.jpg",
   },
   {
     id: 10,
@@ -122,7 +122,7 @@ export const MENU = [
     spicy: 1,
     sig: false,
     price: 9.5,
-    img: "/img/menu/DalFry.jpg",
+    img: "img/menu/DalFry.jpg",
   },
 
   // 🍚 Biryani & riz
@@ -135,7 +135,7 @@ export const MENU = [
     spicy: 2,
     sig: true,
     price: 12.0,
-    img: "/img/menu/ChickenBiryani.jpg",
+    img: "img/menu/ChickenBiryani.jpg",
   },
   {
     id: 12,
@@ -146,7 +146,7 @@ export const MENU = [
     spicy: 2,
     sig: false,
     price: 10.5,
-    img: "/img/menu/VegBiryani.jpg",
+    img: "img/menu/VegBiryani.jpg",
   },
 
   // 🫓 Pains
@@ -159,7 +159,7 @@ export const MENU = [
     spicy: 0,
     sig: false,
     price: 3.0,
-    img: "/img/menu/Naan.jpg",
+    img: "img/menu/Naan.jpg",
   },
   {
     id: 14,
@@ -170,7 +170,7 @@ export const MENU = [
     spicy: 0,
     sig: true,
     price: 4.0,
-    img: "/img/menu/GarlicNaan.jpg",
+    img: "img/menu/GarlicNaan.jpg",
   },
 
   // 🍰 Desserts & 🍹 boissons
@@ -183,7 +183,7 @@ export const MENU = [
     spicy: 0,
     sig: true,
     price: 5.0,
-    img: "/img/menu/GulabJamun.jpg",
+    img: "img/menu/GulabJamun.jpg",
   },
   {
     id: 16,
@@ -194,7 +194,7 @@ export const MENU = [
     spicy: 0,
     sig: false,
     price: 4.5,
-    img: "/img/menu/Kheer.jpg",
+    img: "img/menu/Kheer.jpg",
   },
   {
     id: 17,
@@ -205,7 +205,7 @@ export const MENU = [
     spicy: 0,
     sig: false,
     price: 4.0,
-    img: "/img/menu/MangoLassi.jpg",
+    img: "img/menu/MangoLassi.jpg",
   },
   {
     id: 18,
@@ -216,6 +216,6 @@ export const MENU = [
     spicy: 0,
     sig: false,
     price: 3.5,
-    img: "/img/menu/MasalaChai.jpg",
+    img: "img/menu/MasalaChai.jpg",
   },
 ];
