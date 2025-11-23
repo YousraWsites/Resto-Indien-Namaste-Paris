@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { MENU } from "../data/menuData.js";
 import Img from "../components/Img.jsx";
 import heroImg from "../assets/dinerindien.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   // On prend juste 3 plats au hasard du menu (les 3 premiers)
   const featured = MENU.slice(0, 3);
+  const MotionLink = motion(Link);
 
   return (
     <section className="home">
@@ -34,32 +36,35 @@ export default function Home() {
             onctueux et street food. Carte maison, produits frais, épices
             torréfiées.
           </motion.p>
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <motion.a
-              href="/menu"
-              className="btn"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Voir le menu
-            </motion.a>
-            <motion.a
-              href="/offers"
-              className="btn btn-outline"
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Offres midi
-            </motion.a>
-            <motion.button
-              className="btn btn-outline"
-              onClick={() => setOpen(true)}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Réserver
-            </motion.button>
-          </div>
+         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+  <MotionLink
+    to="/menu"
+    className="btn"
+    whileHover={{ scale: 1.04 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    Voir le menu
+  </MotionLink>
+
+  <MotionLink
+    to="/offers"
+    className="btn btn-outline"
+    whileHover={{ scale: 1.04 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    Offres midi
+  </MotionLink>
+
+  <motion.button
+    className="btn btn-outline"
+    onClick={() => setOpen(true)}
+    whileHover={{ scale: 1.04 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    Réserver
+  </motion.button>
+</div>
+
         </div>
 
         <motion.div
