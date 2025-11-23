@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { MENU } from "../data/menuData.js";
 import Img from "../components/Img.jsx";
 import heroImg from "../assets/dinerindien.jpg";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";   // 👈 nouveau
+
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  // On prend juste 3 plats au hasard du menu (les 3 premiers)
   const featured = MENU.slice(0, 3);
-  const MotionLink = motion(Link);
+  const navigate = useNavigate();                 // 👈 nouveau
+
 
   return (
     <section className="home">
@@ -36,24 +37,24 @@ export default function Home() {
             onctueux et street food. Carte maison, produits frais, épices
             torréfiées.
           </motion.p>
-         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-  <MotionLink
-    to="/menu"
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+  <motion.button
     className="btn"
     whileHover={{ scale: 1.04 }}
     whileTap={{ scale: 0.98 }}
+    onClick={() => navigate("/menu")}          // 👈 navigation SPA
   >
     Voir le menu
-  </MotionLink>
+  </motion.button>
 
-  <MotionLink
-    to="/offers"
+  <motion.button
     className="btn btn-outline"
     whileHover={{ scale: 1.04 }}
     whileTap={{ scale: 0.98 }}
+    onClick={() => navigate("/offers")}        // 👈 navigation SPA
   >
     Offres midi
-  </MotionLink>
+  </motion.button>
 
   <motion.button
     className="btn btn-outline"
