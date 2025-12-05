@@ -2,12 +2,14 @@ import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MENU, CATEGORIES } from '../data/menuData.js';
 import Img from '../components/Img.jsx';
+import { useCart } from "../contexts/CartContext.jsx";
 
 export default function Menu() {
   const [q, setQ] = useState('');
   const [tab, setTab] = useState('Curries');
   const [onlyVeg, setOnlyVeg] = useState(false);
   const [maxSpicy, setMaxSpicy] = useState(3);
+  const { add } = useCart();
 
   const shown = useMemo(()=>{
     return MENU.filter(m =>
@@ -61,7 +63,9 @@ export default function Menu() {
             </div>
             <div style={{display:'grid', gap:8, justifyItems:'end'}}>
               <strong className="mi-price">{it.price.toFixed(2)}€</strong>
-              <button className="btn" onClick={()=>alert('Ajout au panier désactivé si tu préfères réserver uniquement 😉')}>Ajouter</button>
+<button className="btn" onClick={() => add(it, 1)}>
+  Ajouter
+</button>
             </div>
           </motion.div>
         ))}
